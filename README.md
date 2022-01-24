@@ -32,3 +32,5 @@ sam package   --template-file template.yml   --output-template-file package.yml 
 
 sam deploy --template-file /home/image-resizer/package.yml --stack-name MentoringProjectGabriel-ImageUploader
 ```
+
+PS: thanks to Gustavo Carpaneses for mentoring :)
