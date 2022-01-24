@@ -1,0 +1,4 @@
+/.aws-sam
+/dependencies
+/samconfig.toml
+dependencies.zip
