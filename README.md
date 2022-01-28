@@ -12,6 +12,16 @@ Tools used:
 Download dependencies with Yumda (see Yumda README.md for more details)
 ```
 docker run --rm -v "$PWD"/dependencies:/lambda/opt lambci/yumda:2 yum install -y GraphicsMagick curl
+cd dependencies
+zip -yr ../dependencies.zip .
+cd ..
+```
+
+Download npm dependencies
+```
+cd /image-uploader
+npm i
+cd ..
 ```
 
 Build
@@ -19,11 +29,9 @@ Build
 sam build
 ```
 
-Prepare for packing/deploy (see Yumda README.md for more details)
+Run local
 ```
-cd dependencies
-zip -yr ../dependencies.zip .
-cd ..
+sam local start-api
 ```
 
 Pack/Deploy
